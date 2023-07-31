@@ -1,0 +1,18 @@
+# Volume Name: pv-log
+# Storage: 100Mi
+# Access Modes: ReadWriteMany
+# Host Path: /pv/log
+# Reclaim Policy: Retain
+
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-log
+spec:
+  capacity:
+    storage: 100Mi
+  accessModes:
+    - ReadWriteMany
+  persistentVolumeReclaimPolicy: Retain
+  hostPath:
+    path: "/pv/log"
